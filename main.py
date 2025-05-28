@@ -1,4 +1,5 @@
 import dash
+import os
 from dash import html, dcc
 import dash_bootstrap_components as dbc
 
@@ -78,4 +79,6 @@ app.layout = dbc.Container([
 
 
 if __name__ == "__main__":
-    app.run(debug=False)
+            port = int(os.environ.get('PORT', 8050))  # Render sets this automatically
+            app.run(debug=False, host='0.0.0.0', port=port)
+
