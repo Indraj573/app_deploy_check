@@ -1,0 +1,64 @@
+/* Sidebar base style */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 5vw;
+    background-color: #343a40;
+    transition: width 0.3s ease-in-out;
+    overflow-x: hidden;
+    padding-top: 2vh;
+    z-index: 1000;
+    color: white;
+}
+
+/* Expand sidebar on hover */
+.sidebar:hover {
+    width: 15vw; /* Expanded width */
+}
+
+/* Reveal text on hover */
+.sidebar:hover .btn-text {
+    display: inline;
+}
+
+/* Sidebar button style */
+.sidebar-btn {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 2vh 2vw;
+    font-size: 1.2vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    cursor: pointer;
+}
+
+/* Icon sizing */
+.sidebar-btn i {
+    font-size: 2vw;
+}
+
+/* Hidden text initially */
+.btn-text {
+    display: none;
+}
+
+/* Button hover effect */
+.sidebar-btn:hover {
+    background-color: #495057;
+}
+
+/* Shift main content if needed (optional) */
+.main-content {
+    margin-left: 5vw;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.sidebar:hover ~ .main-content {
+    margin-left: 15vw;
+}

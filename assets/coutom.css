@@ -1,0 +1,69 @@
+/* Sidebar container */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 60px; /* collapsed width */
+    background-color: #f8f9fa;
+    transition: width 0.3s ease;
+    overflow-x: hidden;
+    z-index: 9999;
+}
+
+/* Expand sidebar on hover */
+.sidebar:hover {
+    width: 200px;
+}
+
+/* Navigation menu inside sidebar */
+.nav-menu {
+    padding-top: 1rem;
+}
+
+/* Nav item styles */
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* Show icon always */
+.nav-item i {
+    font-size: 1.5rem;
+}
+
+/* Hide nav-label by default (collapsed state) */
+.nav-label {
+    display: none;
+    margin-left: 10px;
+    font-size: 1rem;
+}
+
+/* Show label on sidebar hover */
+.sidebar:hover .nav-label {
+    display: inline;
+}
+
+/* Highlight active link */
+.nav-item.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+/* Style the main page content to the right of sidebar */
+.page-content {
+    margin-left: 60px; /* same as collapsed sidebar width */
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Expand content margin when sidebar expanded */
+.sidebar:hover ~ .page-content {
+    margin-left: 200px;
+}
