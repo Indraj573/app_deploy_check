@@ -17,15 +17,15 @@ app.layout = html.Div([
         id="sidebar",
         children=[
             html.Button([
-                html.I(className="bi bi-house", style={"fontSize": "2vw"}),
+                html.I(className="bi bi-house"),
                 html.Span(" Home", className="btn-text")
             ], className="sidebar-btn", id="btn-home"),
             html.Button([
-                html.I(className="bi bi-bar-chart", style={"fontSize": "2vw"}),
+                html.I(className="bi bi-bar-chart"),
                 html.Span(" Analytics", className="btn-text")
             ], className="sidebar-btn", id="btn-analytics"),
             html.Button([
-                html.I(className="bi bi-gear", style={"fontSize": "2vw"}),
+                html.I(className="bi bi-gear"),
                 html.Span(" Settings", className="btn-text")
             ], className="sidebar-btn", id="btn-settings"),
         ],
@@ -47,17 +47,17 @@ app.layout = html.Div([
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
                 
-                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=10, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
             dbc.Col(dcc.Graph(
                             id='line-fig-2',
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
-                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=10, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
             dbc.Col(dcc.Graph(
                             id='line-fig-3',
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
-                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=10, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
         ]) ,style={"marginLeft": "5vw"}
     )
 ], style={"font-family": "Arial, sans-serif"})
