@@ -47,17 +47,17 @@ app.layout = html.Div([
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
                 
-                        ),xs=4, sm=4, md=4, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
             dbc.Col(dcc.Graph(
                             id='line-fig-2',
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
-                        ),xs=4, sm=4, md=4, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
             dbc.Col(dcc.Graph(
                             id='line-fig-3',
                             figure=px.histogram(df, x='continent', y='lifeExp', histfunc='avg')
                                     .update_layout(showlegend=False, margin=dict(l=10, r=10, t=30, b=30)), style = {'height':'50vh'}
-                        ),xs=4, sm=4, md=4, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
+                        ),xs=12, sm=10, md=8, lg=4, xl=4, xxl=4,style={'border': '.01vw solid black'}),
         ]) ,style={"marginLeft": "5vw"}
     )
 ], style={"font-family": "Arial, sans-serif"})
